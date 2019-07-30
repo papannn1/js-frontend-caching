@@ -15,10 +15,9 @@ module.exports.init = (driver = 'localstorage', expire = 5) => {
 }
 
 module.exports.save = (key, data, action, expire_time = 5) => {
-    console.log(DRIVER)
     switch(DRIVER){
         case LOCAL_STORAGE:
-            localFunction(key, data, action)
+            localFunction(key, data, action, expire_time)
             break;
         case SESSION_STORAGE:
             break;
@@ -28,6 +27,10 @@ module.exports.save = (key, data, action, expire_time = 5) => {
             //Cookie
             break;
     }
+}
+
+module.exports.get = (key, errorHandling) => {
+    
 }
 
 
