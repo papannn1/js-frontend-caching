@@ -9,9 +9,9 @@ const COOKIE = 'cookie'
 
 const MINUTE = 60
 
-module.exports.init = (driver = 'localstorage', expire = 5) => {
+module.exports.init = (driver = 'localstorage') => {
     DRIVER = driver;
-    EXPIRE_TIME = MINUTE * expire;
+    // EXPIRE_TIME = MINUTE * expire;
 }
 
 module.exports.save = (key, data, action, expire_time = 5) => {
